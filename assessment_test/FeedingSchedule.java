@@ -1,26 +1,22 @@
 public class FeedingSchedule{
 	public static void main(String[] args){
-		boolean keepGoing = true;
-		int count = 0;
-		int x = 3;
-		while(count++ < 3){
-			int y = (1 + 2 * count) % 3;
-			switch(y){
-				default:
-				case 0: x -= 1;				
-				break;
-				case 1: x += 5;
-			}
-		}
-	System.out.println(x);
-} }
+		int x = 5, j = 0;
+		OUTER: for(int i = 0; i < 3;)
+			INNER: do{
+				i++; x++;
+				if(x > 10) break INNER;
+				x += 4;
+				j++;
+			} while(j <= 2);
+		System.out.println(x);	
+}}
 
 /*
-4.What is the output of the following program?
-A. 4
-B. 5
-C. 6 (X)
-D. 7
-E. 13
-F. The code will not compile because of line 7.
+11. What is the output of the following program?
+A. 10
+B. 12 (X)
+C. 13
+D. 17
+E. The code will not compile because of line 4.
+F. The code will not compile because of line 6.
 */
